@@ -1,3 +1,3 @@
-***REMOVED***
+# Kafka to mesh
 
-***REMOVED***
+Workspace for the kafka to mesh
