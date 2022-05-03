@@ -1,0 +1,8 @@
+{
+  "extends": "../../../.eslintrc",
+  "rules": {
+    "no-new": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-magic-numbers": [ "off" ]
+  }
+}

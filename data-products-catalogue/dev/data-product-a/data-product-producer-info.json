@@ -1,0 +1,6 @@
+{
+  "account-type": "aws",
+  "producer-role-arn": "arn:aws:iam::987654321:role/lakeformation-producer-role",
+  "producer-account-id": "987654321",
+  "bucket-name": "data-product-a"
+}

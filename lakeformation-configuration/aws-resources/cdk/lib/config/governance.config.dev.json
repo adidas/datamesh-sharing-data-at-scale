@@ -1,0 +1,16 @@
+{
+  "comments":[
+    "This entry is ignored in the code",
+    "Specific values for dev environment"
+  ],
+  "DataLakeSettings": {
+    "comments": [
+      "This entry is ignored in the code",
+      "Data Lake settings for dev environment",
+      "Admins field includes roles and users to set as Lake Formation administrators"
+    ],
+    "Admins": [
+      "Specify the Lake Formation administrator arn role or user"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "comments": [
+      "This entry is ignored in the code",
+      "Default configuration for all environments",
+      "Any value can be overriden by specific environment"
+  ],
+  "Logging": {
+    "LogLevel": "debug",
+    "RetentionInDays": 3
+  },
+  "Lambda": {
+    "TimeoutSeconds": 30,
+    "MemorySizeMB": 192,
+    "MaxNameLength": 64
+  }
+}

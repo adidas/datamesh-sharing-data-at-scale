@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "sourceMap": false,
+  "include": [
+    "../../src/**/*",
+    "../specs/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

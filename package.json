@@ -1,0 +1,44 @@
+{
+  "name": "@adidas-data-mesh/lakeformation-enablement-journeys",
+  "description": "Project for gathering the step function infrastructure of jouneys of the lakeformation account",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:prod --workspaces",
+    "build:dev": "npm run build:dev --workspaces",
+    "fullClean": "npm run fullClean --workspaces && npm run clean:cdk && npm run clean:dependencies",
+    "clean": "npm run clean --workspaces && npm run clean:cdk",
+    "clean:dependencies": "rimraf package-lock.json && rimraf node_modules",
+    "clean:cdk": "rimraf cdk.out",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "test": "npm run test --workspaces",
+    "test:watch": "npm run test:watch --workspaces",
+    "test:ci": "npm run test:ci --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
+    "generateSonarProperties": "node sonar.js",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "aws-cdk": "1.148.0",
+    "husky": "4.2.5"
+  },
+  "workspaces": [
+    "./common-utils/testing",
+    "./common-utils/common",
+    "./common-utils/service-catalog",
+    "./lakeformation-configuration/*",
+    "./common-aws/*",
+    "./producer-journey/*",
+    "./visibility-journey/*",
+    "./consumer-journey/*",
+    "./data-product-assets-setup/*",
+    "./main-stack"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

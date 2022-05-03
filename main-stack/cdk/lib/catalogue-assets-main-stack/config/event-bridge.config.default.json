@@ -1,0 +1,12 @@
+{
+  "comments": [
+      "This entry is ignored in the code",
+      "Default configuration for all environments",
+      "Any value can be overriden by specific environment"
+  ],
+  "StepFunctionsJourneysName": {
+    "ConsumerJourney": "adidas-Enablement-Journeys-consumer",
+    "VisibilityJourney": "adidas-Enablement-Journeys-visibility",
+    "ProducerJourney": "adidas-Enablement-Journeys-producer"
+  }
+}

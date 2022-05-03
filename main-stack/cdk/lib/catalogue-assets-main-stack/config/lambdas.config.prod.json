@@ -1,0 +1,11 @@
+{
+  "comments": [
+      "This entry is ignored in the code",
+      "Specific values for prod environment",
+      "Values specified here override the ones in default file"
+  ],
+  "Logging": {
+      "LogLevel": "info",
+      "RetentionInDays": 14
+  }
+}

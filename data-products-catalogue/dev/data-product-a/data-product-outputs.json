@@ -1,0 +1,24 @@
+  {
+    "outputs":{
+      "sales_trends":{
+        "file-format":"parquet",
+        "port-type": "blob",
+        "location": "s3://data-product-a/sales_trends",
+        "partition-columns": [ "foobar" ],
+        "retention-time": {
+          "unit": "day",
+          "time": 2
+        }
+      },
+      "sales_predictions":{
+        "file-format":"parquet",
+        "port-type": "blob",
+        "location": "s3://data-product-a/sales_predictions",
+        "partition-columns": [ "foobar" ],
+        "retention-time": {
+          "unit": "day",
+          "time": 2
+        }
+      }
+    }
+  }

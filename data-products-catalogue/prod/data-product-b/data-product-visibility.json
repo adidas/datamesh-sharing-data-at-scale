@@ -1,0 +1,24 @@
+{
+  "tables": [
+      {
+          "name": "sales_predictions",
+          "visibility": "internal",
+          "columns": [
+              {
+                  "name": "article_number",
+                  "pci": true
+              }
+          ]
+      },
+      {
+          "name": "sales_trends",
+          "visibility": "public",
+          "columns": [
+              {
+                  "name": "date",
+                  "pci": true
+              }
+          ]
+      }
+  ]
+}

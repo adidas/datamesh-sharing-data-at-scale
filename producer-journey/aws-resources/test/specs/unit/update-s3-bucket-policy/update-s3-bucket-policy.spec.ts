@@ -1,0 +1,73 @@
+import { Construct } from '@aws-cdk/core';
+import { getMockObject } from '@adidas-data-mesh/testing';
+import { UpdateS3BucketPolicyChain } from '../../../../cdk/lib/update-s3-bucket-policy/chain';
+import { UpdateS3BucketPolicyLambda } from '../../../../cdk/lib/update-s3-bucket-policy/lambda';
+import {
+  UpdateS3BucketPolicy, UpdateS3BucketPolicyProps
+} from '../../../../cdk/lib/update-s3-bucket-policy/update-s3-bucket-policy';
+
+const basicStackId = 'UpdateS3BucketPolicyProducer';
+const deploymentEnvironment = 'dev';
+const stackBaseName = 'stackBaseName';
+const failedChain: any = jest.fn();
+const successChain: any = jest.fn();
+const mockedStack: any = jest.fn();
+const stackBaseProps: UpdateS3BucketPolicyProps = {
+  deploymentEnvironment,
+  stackBaseName
+};
+const lambdaMock = jest.fn();
+
+jest.mock('@aws-cdk/core', () => ({ Construct: jest.fn() }));
+jest.mock('../../../../cdk/lib/update-s3-bucket-policy/lambda', () => ({
+  UpdateS3BucketPolicyLambda: jest.fn(() => ({ lambda: lambdaMock }))
+}));
+jest.mock('../../../../cdk/lib/update-s3-bucket-policy/chain', () => ({
+  UpdateS3BucketPolicyChain: jest.fn() }));
+
+describe('# UpdateS3BucketPolicy', () => {
+  beforeEach(() => jest.clearAllMocks());
+  afterAll(() => jest.restoreAllMocks());
+
+  it('Should initialize the class', (done) => {
+    new UpdateS3BucketPolicy(
+      mockedStack, basicStackId, stackBaseProps
+    );
+
+    expect(Construct).toHaveBeenCalledTimes(1);
+
+    done();
+  });
+
+  it('Should have a UpdateS3BucketPolicyLambda construct', (done) => {
+    const constructId = 'UpdateS3BucketPolicyLambda';
+    const construct = new UpdateS3BucketPolicy(
+      mockedStack, basicStackId, stackBaseProps
+    );
+
+    expect(UpdateS3BucketPolicyLambda).toHaveBeenCalledTimes(1);
+    expect(UpdateS3BucketPolicyLambda).toHaveBeenCalledWith(construct, constructId, {
+      deploymentEnvironment: stackBaseProps.deploymentEnvironment,
+      stackBaseName: stackBaseProps.stackBaseName
+    });
+
+    done();
+  });
+
+  it('Should have a UpdateS3BucketPolicyChain construct', (done) => {
+    const constructId = 'UpdateS3BucketPolicyChain';
+    const construct = new UpdateS3BucketPolicy(
+      mockedStack, basicStackId, stackBaseProps
+    );
+
+    const newChain = construct.setupChain(failedChain, successChain);
+
+    expect(UpdateS3BucketPolicyChain).toHaveBeenCalledTimes(1);
+    expect(UpdateS3BucketPolicyChain).toHaveBeenCalledWith(construct, constructId, {
+      updateS3BucketPolicy: lambdaMock, failedChain, successChain
+    });
+    expect(newChain).toEqual(getMockObject(UpdateS3BucketPolicyChain).mock.instances[0]);
+
+    done();
+  });
+});

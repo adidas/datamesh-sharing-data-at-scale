@@ -1,0 +1,30 @@
+node_modules
+.env
+.cache
+.DS_Store
+
+# CDK asset staging directory
+.cdk.staging
+
+# Build Files
+dist
+
+# Test results
+**/test/results
+.stryker-tmp
+
+# Docs
+doc
+
+.vscode
+.idea
+
+# cdk.context.json
+cdk.out/p/assign-column-tags/di
+
+outputs.json
+cdk.out
+cdk.context.json
+test-results.json
+templates/
+sonar-project.properties

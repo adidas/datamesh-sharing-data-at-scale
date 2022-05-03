@@ -1,0 +1,24 @@
+{
+  "extends": "./node_modules/build-tools-typescript/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/",
+    "lib": [ "es2019" ],
+    // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping#recommended-node-tsconfig-settings
+    // Node 12 -> ES2019
+    "target": "ES2019",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "consumers": [
+      {
+        "account":"123456789",
+        "contact": "foo.bar@adidas.com",
+        "type": "lakeformation",
+        "enterprise-system-landscape-information-tracker": "foobar",
+        "team": "foobar",
+        "consumer-role-arn": "arn:aws:iam::123456789:role/ConsumerDataMeshRole"
+      }
+  ]
+}

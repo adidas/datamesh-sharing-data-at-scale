@@ -1,0 +1,6 @@
+{
+  "StateMachine": {
+    "TimeoutMinutes": 60,
+    "MaxNameLength": 64
+  }
+}

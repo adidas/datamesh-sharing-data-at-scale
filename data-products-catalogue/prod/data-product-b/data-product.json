@@ -1,0 +1,11 @@
+{
+  "data-product-name": "producer_data",
+  "data-product-owner": "foo.bar@adidas.com",
+  "data-product-mantainer": "foo.bar@adidas.com",
+  "enterprise-system-landscape-information-tracker": "foobar",
+  "edc-data-objects": [ "foobar" ],
+  "source-system": "internal-system",
+  "usage-patterns": ["foobar"],
+  "dq-rules": "foobar",
+  "version": "0.0.1"
+}

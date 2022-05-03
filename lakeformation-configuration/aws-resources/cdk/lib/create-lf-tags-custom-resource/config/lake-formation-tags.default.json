@@ -1,0 +1,14 @@
+[
+  {
+    "TagKey": "visibility",
+    "TagValues": [ "internal", "public", "confidential" ]
+  },
+  {
+    "TagKey": "pci",
+    "TagValues": [ "true", "false" ]
+  },
+  {
+    "TagKey": "pii",
+    "TagValues": [ "true", "false" ]
+  }
+]
