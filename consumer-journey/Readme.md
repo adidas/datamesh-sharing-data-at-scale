@@ -1,3 +1,3 @@
-***REMOVED***
+# Consumer Journey
 
-***REMOVED***
+Workspace for the consumer journey
