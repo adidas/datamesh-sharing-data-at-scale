@@ -1,4 +1,6 @@
 # Adidas Data Mesh: Sharing Data at Scale
+![CI](https://github.com/adidas/datamesh-sharing-data-at-scale/actions/workflows/ci-pipeline.yml/badge.svg)
+
 
 This is the base project we used for sharing at scale in our Data Mesh Journey. You can find all the explantions in this medium [article]()
 
